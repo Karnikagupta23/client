@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API from "../services/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 
 function MyBooking() {
   const [bookings, setBookings] = useState([]);
@@ -19,7 +19,7 @@ function MyBooking() {
       try {
         const res = await API.get("/booking/mybookings");
         console.log(res.data); // see the response here
-        setBookings(res.data.bookings || []);
+        setBookings(res.data || []);
       } catch (err) {
         console.error(err);
         alert("Failed to fetch bookings");
