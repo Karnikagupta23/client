@@ -17,7 +17,7 @@ function MyBooking() {
 
     const fetchBookings = async () => {
       try {
-        const res = await API.get("/mybooking");
+        const res = await API.get("/booking/mybookings");
         console.log(res.data); // see the response here
         setBookings(res.data.bookings || []);
       } catch (err) {
