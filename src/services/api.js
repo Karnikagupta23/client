@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL : 'https://coursebooking-2-hwmy.onrender.com',
+    baseURL : 'https://coursebooking-2-hwmy.onrender.com/api',
     withCredentials: true, //agar cookies ka use ho rha hai
 });
 
